@@ -47,6 +47,9 @@
 #define __OPENCV_CUDEV_COMMON_HPP__
 
 #include <cuda_runtime.h>
+#if __CUDACC_VER_MAJOR__ >= 9
+#include <cuda_fp16.h>
+#endif
 #include "opencv2/core/cuda.hpp"
 #include "opencv2/core/cuda_stream_accessor.hpp"
 
